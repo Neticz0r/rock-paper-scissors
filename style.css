@@ -1,0 +1,31 @@
+* {
+    background-color: #a4bbc4;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+.choices{
+    display: inline-block;
+    height: 175px;
+    width: 175px;
+    border: 2px solid #7a8c93;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.choices img{
+    height: 150px;
+    width: 150px;
+}
+
