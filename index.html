@@ -2,12 +2,18 @@
 <html lang="en">
     <head>
         <title>Rock Paper Scissors</title>
-       <script src="./game.js" ></script>
-       <link href="./style.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="./game.js" ></script>
+        <link href="./style.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
         <h1>Rock Paper Scissors</h1>
+
+        <div class="score">
+            <h3>Player score: <span id="pScore"> 0 </span></h3>
+            <h3>Cpu score: <span id="cScore"> 0 </span> </h3>
+        </div>
+
         <div class="cpu">
             <h2>Cpu has chosen :</h2>
             <div class="choices"><img id="cpuImg" src=""></div>
@@ -27,8 +33,8 @@
             <div class="choices">
                 <img src="./images/scissors.png" onclick="shoot();">
             </div>
-
         </div>
+        
     </body>
 
 </html>
