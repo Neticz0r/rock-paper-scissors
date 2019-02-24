@@ -55,9 +55,6 @@ center{
     text-shadow: 6px 3px 6px rgba(0,0,0,0.3);
 }
 
-/* Choices*/
-
-
 .choicesDisplay{
     display: inline-block;
     height: 175px;
@@ -75,6 +72,8 @@ center{
     height: 150px;
     width: 150px;
 }
+
+/* Choices*/
 
 .choices{
     display: inline-block;

@@ -10,7 +10,7 @@ let cpuImage = document.getElementById("cpuImg")
 let resultMessage = document.getElementById("message")
 
 let winning = document.getElementById("player")
-let loosing = document.getElementById("cpu")
+let losing = document.getElementById("cpu")
 
 let scorePlayer = 0
 let scoreCPU = 0
@@ -105,14 +105,14 @@ function win(){
 function loose(){
     scoreCPU = scoreCPU + 1
     cpuPoints.textContent = scoreCPU;
-    loosing.style.boxShadow = "0px 0px 25px 1px #c64949;"
+    losing.style.boxShadow = "0px 0px 25px 1px #c64949;"
     resultMessage.style.color = "#c64949"
     resultMessage.textContent = "You lost this round!"
 }
 
 function draw(){
     winning.style.boxShadow = "0px 0px 25px 1px #e0c933;"
-    loosing.style.boxShadow = "0px 0px 25px 1px #e0c933;"
+    losing.style.boxShadow = "0px 0px 25px 1px #e0c933;"
     resultMessage.style.color = "#e0c933"
     resultMessage.textContent = "Draw"
 }
