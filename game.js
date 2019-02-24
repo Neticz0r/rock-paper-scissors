@@ -33,13 +33,13 @@ function gameConditions(){
         //player
     } else if (localPlay === choices[1] && cpuChoice === choices[2]){
         scoreCPU = scoreCPU + 1
-        return cpuPoints.textContent = scoreCpu;
+        return cpuPoints.textContent = scoreCPU;
         //cpu
 
     // SCISSORS
     } else if (localPlay === choices[2] && cpuChoice === choices[0]){
         scoreCPU = scoreCPU + 1
-        return cpuPoints.textContent = scoreCpu;
+        return cpuPoints.textContent = scoreCPU;
         //cpu
     } else if (localPlay === choices[2] && cpuChoice === choices[1]){
         scorePlayer = scorePlayer+ 1
