@@ -2,39 +2,54 @@
 <html lang="en">
     <head>
         <title>Rock Paper Scissors</title>
-        <script type="text/javascript" src="./game.js" ></script>
         <link href="./style.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Rock Paper Scissors</h1>
+        <center>
+            <h1>Rock Paper Scissors</h1>
 
-        <div class="score">
-            <h3>Player score: <span id="pScore"> 0 </span></h3>
-            <h3>Cpu score: <span id="cScore"> 0 </span> </h3>
-        </div>
-
-        <div class="cpu">
-            <h2>Cpu has chosen :</h2>
-            <div class="choices"><img id="cpuImg" src=""></div>
-        </div>
-
-        <div class="player">
-            <h2>Choose one :</h2>
-
-            <div class="choices">
-                <img src="./images/rock.png" onclick="shoot();">
+            <div class="score">
+                <h3>Player score: <span id="pScore"> 0 </span></h3>
+                <h3>Cpu score: <span id="cScore"> 0 </span> </h3>
             </div>
+        </center>
+        <center>
+            <div class="cDisplayContainer">
 
-            <div class="choices">
-                <img src="./images/paper.png" onclick="shoot();">
-            </div>
+                <div class="cDisplay">
+                    <h2>Cpu has chosen :</h2>
+                    <div class="choices"><img id="cpuImg" src="./images/rock-paper-scissors.png"></div>
+                </div>
 
-            <div class="choices">
-                <img src="./images/scissors.png" onclick="shoot();">
+                <div class="cDisplay">
+                    <h2>You Chose :</h2>
+                    <div class="choices"><img id="playerImg" src="./images/rock-paper-scissors.png"></div>
+                </div>
+
+                <center><h2 class="cdMessage" id="message"></h2></center>
+
             </div>
-        </div>
-        
+        </center>
+
+        <center>
+            <div class="player">
+                <h2>Choose one :</h2>
+
+                <div class="choices">
+                    <img src="./images/rock.png" class="items" id="rock">
+                </div>
+
+                <div class="choices">
+                    <img src="./images/paper.png"  class="items" id="paper">
+                </div>
+
+                <div class="choices">
+                    <img src="./images/scissors.png"  class="items" id="scissors">
+                </div>
+            </div>
+        </center>
+    <script type="text/javascript" src="./game.js" ></script>
     </body>
 
 </html>
