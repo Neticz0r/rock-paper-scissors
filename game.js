@@ -1,5 +1,4 @@
 let choices = ["rock", "paper", "scissors"]
-
 let localPlay;
 
 let rock = document.getElementById("rock")
@@ -9,6 +8,9 @@ let scissors = document.getElementById("scissors")
 let playerImage = document.getElementById("playerImg")
 let cpuImage = document.getElementById("cpuImg")
 let resultMessage = document.getElementById("message")
+
+let winning = document.getElementById("player")
+let loosing = document.getElementById("cpu")
 
 let scorePlayer = 0
 let scoreCPU = 0
@@ -45,56 +47,29 @@ function cpuPlay(){
 function gameConditions(){
     // DRAW
     if (localPlay === cpuChoice){
-        resultMessage.style.color = "#e0c933"
-        resultMessage.textContent = "Draw"
+        draw();
     // ROCK
     } else if (localPlay === choices[0] && cpuChoice === choices[1]){
-        scoreCPU = scoreCPU + 1
-        cpuPoints.textContent = scoreCPU;
-        resultMessage.style.color = "#c64949"
-        resultMessage.textContent = "You lost this round!"
-        //cpu
+        loose();
     } else if (localPlay === choices[0] && cpuChoice === choices[2]){
-        scorePlayer = scorePlayer + 1
-        playerPoints.textContent = scorePlayer;
-        resultMessage.style.color = "#a7f442"
-        resultMessage.textContent = "You won this round!"
-        //player
-
+        win();
     // PAPER
     } else if (localPlay === choices[1] && cpuChoice === choices[0]){
-        scorePlayer = scorePlayer + 1
-        playerPoints.textContent = scorePlayer;
-        resultMessage.style.color = "#a7f442"
-        resultMessage.textContent = "You won this round!"
-        //player
+        win();
     } else if (localPlay === choices[1] && cpuChoice === choices[2]){
-        scoreCPU = scoreCPU + 1
-        cpuPoints.textContent = scoreCPU;
-        resultMessage.style.color = "#c64949"
-        resultMessage.textContent = "You lost this round!"
-        //cpu
-
+        loose();
     // SCISSORS
     } else if (localPlay === choices[2] && cpuChoice === choices[0]){
-        scoreCPU = scoreCPU + 1
-        cpuPoints.textContent = scoreCPU;
-        resultMessage.style.color = "#c64949"
-        resultMessage.textContent = "You lost this round!"
-        //cpu
+        loose();
     } else if (localPlay === choices[2] && cpuChoice === choices[1]){
-        scorePlayer = scorePlayer+ 1
-        playerPoints.textContent = scorePlayer;
-        resultMessage.style.color = "#a7f442"
-        resultMessage.textContent = "You won this round!"
-        //player
+        win();
     // DEBUG
     } else {
         console.log("not working")
     }
 }
 
-/** Event driven functions **/
+/** main function **/
 
 function shoot(){
     console.log("local play = " + localPlay)
@@ -118,3 +93,27 @@ function imageChanger(){
 
 
 }
+
+function win(){
+    scorePlayer = scorePlayer+ 1
+    playerPoints.textContent = scorePlayer;
+    winning.style.boxShadow = "0px 0px 25px 1px #a7f442;"
+    resultMessage.style.color = "#a7f442"
+    resultMessage.textContent = "You won this round!"
+}
+
+function loose(){
+    scoreCPU = scoreCPU + 1
+    cpuPoints.textContent = scoreCPU;
+    loosing.style.boxShadow = "0px 0px 25px 1px #c64949;"
+    resultMessage.style.color = "#c64949"
+    resultMessage.textContent = "You lost this round!"
+}
+
+function draw(){
+    winning.style.boxShadow = "0px 0px 25px 1px #e0c933;"
+    loosing.style.boxShadow = "0px 0px 25px 1px #e0c933;"
+    resultMessage.style.color = "#e0c933"
+    resultMessage.textContent = "Draw"
+}
+
