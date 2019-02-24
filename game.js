@@ -97,7 +97,6 @@ function imageChanger(){
 function win(){
     scorePlayer = scorePlayer+ 1
     playerPoints.textContent = scorePlayer;
-    winning.style.boxShadow = "0px 0px 25px 1px #a7f442;"
     resultMessage.style.color = "#a7f442"
     resultMessage.textContent = "You won this round!"
 }
@@ -105,14 +104,11 @@ function win(){
 function loose(){
     scoreCPU = scoreCPU + 1
     cpuPoints.textContent = scoreCPU;
-    losing.style.boxShadow = "0px 0px 25px 1px #c64949;"
     resultMessage.style.color = "#c64949"
     resultMessage.textContent = "You lost this round!"
 }
 
 function draw(){
-    winning.style.boxShadow = "0px 0px 25px 1px #e0c933;"
-    losing.style.boxShadow = "0px 0px 25px 1px #e0c933;"
     resultMessage.style.color = "#e0c933"
     resultMessage.textContent = "Draw"
 }
