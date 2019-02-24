@@ -1,10 +1,10 @@
-let choices = ["rock", "paper", "scissors"];
-let localPlay = "rock";
+let choices = ["rock", "paper", "scissors"]
+let localPlay = "paper"
 let cpuChoice;
-let scorePlayer = 0;
-let scoreCPU = 0;
-let playerPoints = document.getElementById("pScore");
-let cpuPoints = document.getElementById("cScore");
+let scorePlayer = 0
+let scoreCPU = 0
+let playerPoints = document.getElementById("pScore")
+let cpuPoints = document.getElementById("cScore")
 
 function cpuPlay(){
     cpuChoice = choices[Math.floor(Math.random()*choices.length)];
@@ -41,7 +41,7 @@ function gameConditions(){
         scoreCPU = scoreCPU + 1
         return cpuPoints.textContent = scoreCpu;
         //cpu
-    } else if (localPlay === choices[2] && cpuPlay === choices[1]){
+    } else if (localPlay === choices[2] && cpuChoice === choices[1]){
         scorePlayer = scorePlayer+ 1
         return playerPoints.textContent = scorePlayer;
         //player
@@ -49,6 +49,15 @@ function gameConditions(){
     } else {
         console.log("not working")
     }
+}
+
+function shoot(){
+    cpuPlay();
+    gameConditions();
+    console.log(cpuChoice)
+    imageChanger(); 
+    console.log("Player score: " + scorePlayer)
+    console.log("Cpu score: " + scoreCPU) 
 }
 
 function imageChanger(){
@@ -60,12 +69,4 @@ function imageChanger(){
     } else if (cpuChoice === choices[2]) {
         cpuImage.src = "./images/scissors.png"
     }
-}
-
-function shoot(){
-    cpuPlay();
-    gameConditions();
-    imageChanger(); 
-    console.log("Player score: " + scorePlayer)
-    console.log("Cpu score: " + scoreCPU) 
 }
