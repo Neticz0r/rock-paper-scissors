@@ -137,7 +137,7 @@ function shoot() {
 	cpuPlay();
 	gameConditions();
 	imageChanger();
-	roundNumber = scoreCPU + scorePlayer
+	roundNumber++
 	round.textContent = roundNumber;
 	roundCounter();
 };
