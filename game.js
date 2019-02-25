@@ -102,11 +102,11 @@ function draw() {
 };
 /** Round Checker **/
 function roundCounter() {
-	if (roundNumber === 3 && scorePlayer >= 2) {
+	if (scorePlayer >= 2) {
 		endMessage.textContent = "You Won The Game!"
 		endMessage.style.color = "#a7f442"
 		showModal();
-	} else if (roundNumber === 3 && scoreCPU >= 2) {
+	} else if (scoreCPU >= 2) {
 		endMessage.textContent = "You Lost The Game!"
 		endMessage.style.color = "#c64949"
 		showModal();
